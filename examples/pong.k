@@ -141,8 +141,6 @@ context Arena implements EventHandler {
       public void velocityAdjust() {
          int maxX = ThePanel.maxX(), maxY = ThePanel.maxY();
          int xv = velocity().x, yv = velocity().y;
-         xv = if (xv == 0) velocity().x() else xv;
-         yv = if (yv == 0) velocity().y() else yv;
          int newX = xv.clone, newY = yv.clone;
          if (velocity().x() > 0) {
             if (x() + (radius() * 2) >= maxX) newX = -xv
